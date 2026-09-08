@@ -366,19 +366,10 @@ function setupUIEvents() {
   // ==========================================
   const chatbotWidget = document.getElementById('salt-chatbot-widget');
   const chatbotToggleBtn = document.getElementById('chatbot-toggle-btn');
-  const heroChatbotPill = document.getElementById('hero-chatbot-pill');
   const chatbotCloseBtn = document.getElementById('chatbot-close-btn');
   const chatbotMessages = document.getElementById('chatbot-messages');
   const chatbotInput = document.getElementById('chatbot-input');
   const faqChips = document.querySelectorAll('.faq-chip');
-
-  function openChatbot() {
-    if (!chatbotWidget) return;
-    chatbotWidget.classList.add('open');
-    if (chatbotInput) {
-      setTimeout(() => chatbotInput.focus(), 200);
-    }
-  }
 
   if (chatbotToggleBtn && chatbotWidget) {
     chatbotToggleBtn.addEventListener('click', () => {
@@ -386,12 +377,6 @@ function setupUIEvents() {
       if (chatbotWidget.classList.contains('open') && chatbotInput) {
         setTimeout(() => chatbotInput.focus(), 200);
       }
-    });
-  }
-
-  if (heroChatbotPill) {
-    heroChatbotPill.addEventListener('click', () => {
-      openChatbot();
     });
   }
 

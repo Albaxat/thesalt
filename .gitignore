@@ -1,0 +1,9 @@
+# Large Zip archives (individual frames are already in /frames directory)
+restaurant_frames_24fps_JPG.zip
+*.zip
+
+# OS temporary files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store

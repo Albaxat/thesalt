@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>THE SALT – Botanical Garden & Fine Dining</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Preloader -->
+  <div id="loader" class="loader-container">
+    <div class="loader-content">
+      <div class="brand-monogram">THE SALT</div>
+      <div class="loader-subtitle">Botanical Chill Garden & Fine Dining</div>
+      <div class="loader-progress-bar">
+        <div id="progress-fill" class="progress-fill"></div>
+      </div>
+      <div class="loader-status">
+        <span class="loader-text">Loading Experience</span>
+        <span id="progress-text" class="progress-percent">0%</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Slide-Out Drawer Navigation -->
+  <div id="drawer-backdrop" class="drawer-backdrop"></div>
+  <aside id="mobile-drawer" class="mobile-drawer" aria-label="Mobile Navigation Drawer">
+    <div class="drawer-header">
+      <div class="drawer-logo">
+        <span class="logo-text">THE SALT</span>
+        <span class="logo-sub">GARDEN & DINING</span>
+      </div>
+      <button id="drawer-close-btn" class="drawer-close" aria-label="Close navigation menu">&times;</button>
+    </div>
+    <nav class="drawer-nav">
+      <a href="#hero" class="drawer-link">HOME</a>
+      <a href="#specials" class="drawer-link">SIGNATURE SPECIALS</a>
+      <a href="#menu" class="drawer-link">SEASONAL MENU</a>
+      <a href="#heritage" class="drawer-link">OUR HERITAGE</a>
+      <a href="#reservations" class="drawer-link">RESERVE A TABLE</a>
+      <a href="#gallery" class="drawer-link">PATIO GALLERY</a>
+      <a href="#reviews" class="drawer-link">GUEST REVIEWS</a>
+    </nav>
+    <div class="drawer-footer">
+      <a href="#reservations" class="btn btn-primary btn-block drawer-reserve-btn">BOOK A TABLE</a>
+      <div class="drawer-contact-info">
+        <p>428 Grand Promenade, Metropolitan Quarter</p>
+        <p><a href="tel:+15550192834">+1 (555) 019-2834</a></p>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Background Scroll-Driven Canvas Animation -->
+  <div class="canvas-viewport">
+    <canvas id="animation-canvas"></canvas>
+    <div class="canvas-overlay"></div>
+  </div>
+
+  <!-- Main Website Content -->
+  <div class="content-wrapper">
+    <!-- Sticky Top Navigation Bar -->
+    <header id="main-header" class="header">
+      <div class="header-container">
+        <a href="#hero" class="logo">
+          <span class="logo-text">THE SALT</span>
+          <span class="logo-sub">GARDEN & DINING</span>
+        </a>
+
+        <nav class="nav-links">
+          <a href="#hero" class="nav-link">HOME</a>
+          <a href="#specials" class="nav-link">SPECIALS</a>
+          <a href="#menu" class="nav-link">MENU</a>
+          <a href="#heritage" class="nav-link">OUR STORY</a>
+          <a href="#reservations" class="nav-link">RESERVATIONS</a>
+          <a href="#gallery" class="nav-link">GALLERY</a>
+          <a href="#reviews" class="nav-link">REVIEWS</a>
+        </nav>
+
+        <div class="nav-actions">
+          <span class="nav-divider"></span>
+          <a href="#reservations" class="btn btn-primary btn-sm desktop-reserve-btn">BOOK A TABLE</a>
+          <button id="hamburger-btn" class="hamburger-btn" aria-label="Open mobile menu">
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+      <div class="hero-content">
+        <!-- Text Block & Buttons Placed Above the Restaurant Image -->
+        <div class="badge-eyebrow">EST. 2024 &bull; ILLUMINATED CHILL GARDEN & FINE DINING</div>
+        <h1 class="hero-title">THE SALT</h1>
+        <p class="hero-tagline">Artisanal Gastronomy Under the Canopy of Warm Lights</p>
+        <p class="hero-description">
+          An intimate open-air sanctuary where slow-steeped cold brews, wood-fired plates, and curated cellar vintages meet effortless botanical elegance.
+        </p>
+
+        <div class="hero-cta-group">
+          <a href="#reservations" class="btn btn-primary btn-lg">RESERVE A TABLE</a>
+          <a href="#menu" class="btn btn-outline btn-lg">EXPLORE THE MENU</a>
+        </div>
+
+        <!-- Restaurant Image Placed Below the Header Text & Buttons -->
+        <div class="hero-portrait-showcase">
+          <div class="restaurant-portrait-frame">
+            <img src="Gemini_Generated_Image_6w5y776w5y776w5y.png" alt="THE SALT Chill Garden Restaurant" class="restaurant-portrait-img">
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Scroll Cue -->
+      <a href="#specials" class="scroll-cue" aria-label="Scroll to explore">
+        <span class="scroll-cue-text">SCROLL TO DISCOVER</span>
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M6 9l6 6 6-6"/>
+        </svg>
+      </a>
+    </section>
+
+    <!-- Chef's Specials Section (Seasonal Highlights) -->
+    <section id="specials" class="specials-section">
+      <div class="section-container">
+        <div class="section-header">
+          <div class="section-title-group">
+            <span class="badge-eyebrow">SEASONAL HIGHLIGHTS</span>
+            <h2 class="section-title">Chef's Signature Creations</h2>
+          </div>
+          <div class="carousel-controls">
+            <button id="prev-card-btn" class="control-btn" aria-label="Previous special">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M15 18l-6-6 6-6"/>
+              </svg>
+            </button>
+            <button id="next-card-btn" class="control-btn" aria-label="Next special">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 18l6-6-6-6"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="cards-grid" id="cards-container">
+          <!-- Featured 1: Charred Burrata Bowl -->
+          <div class="dish-card">
+            <div class="dish-image-wrapper">
+              <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=800&q=80" alt="Charred Burrata Bowl" class="dish-image" loading="lazy">
+            </div>
+            <div class="dish-info">
+              <div class="dish-title-row">
+                <h3 class="dish-title">Charred Burrata Bowl</h3>
+                <span class="dish-price">$14.00</span>
+              </div>
+              <span class="dish-category">Small Plates & Bites</span>
+              <p class="dish-desc">Torched burrata over heirloom cherry tomatoes, basil oil, and charred artisan sourdough crisps.</p>
+              <button class="dish-link" data-dish="Charred Burrata Bowl" data-price="$14.00" data-cat="Small Plates & Bites" data-desc="Torched burrata over heirloom cherry tomatoes, basil oil, and charred artisan sourdough crisps.">
+                VIEW DETAIL <span class="arrow">&rarr;</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Featured 2: Truffle Wild Mushroom Tagliatelle -->
+          <div class="dish-card">
+            <div class="dish-image-wrapper">
+              <img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=800&q=80" alt="Truffle Wild Mushroom Tagliatelle" class="dish-image" loading="lazy">
+            </div>
+            <div class="dish-info">
+              <div class="dish-title-row">
+                <h3 class="dish-title">Truffle Wild Mushroom Tagliatelle</h3>
+                <span class="dish-price">$19.00</span>
+              </div>
+              <span class="dish-category">Mains</span>
+              <p class="dish-desc">Hand-rolled ribbons tossed in garlic emulsion, foraged seasonal forest mushrooms, 24-month parmesan, and shaved black truffle.</p>
+              <button class="dish-link" data-dish="Truffle Wild Mushroom Tagliatelle" data-price="$19.00" data-cat="Mains" data-desc="Hand-rolled ribbons tossed in garlic emulsion, foraged seasonal forest mushrooms, 24-month parmesan, and shaved black truffle.">
+                VIEW DETAIL <span class="arrow">&rarr;</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Featured 3: The Salt Smash Burger -->
+          <div class="dish-card">
+            <div class="dish-image-wrapper">
+              <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=800&q=80" alt="The Salt Smash Burger" class="dish-image" loading="lazy">
+            </div>
+            <div class="dish-info">
+              <div class="dish-title-row">
+                <h3 class="dish-title">The Salt Smash Burger</h3>
+                <span class="dish-price">$17.00</span>
+              </div>
+              <span class="dish-category">Mains</span>
+              <p class="dish-desc">Double dry-aged beef patties, cave-smoked cheddar, house-pickled shallots, and Maldon sea salt aioli on toasted brioche.</p>
+              <button class="dish-link" data-dish="The Salt Smash Burger" data-price="$17.00" data-cat="Mains" data-desc="Double dry-aged beef patties, cave-smoked cheddar, house-pickled shallots, and Maldon sea salt aioli on toasted brioche.">
+                VIEW DETAIL <span class="arrow">&rarr;</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile Pagination Dots for Specials Swipe Carousel -->
+        <div class="pagination-dots" id="specials-dots"></div>
+      </div>
+    </section>
+
+    <!-- Full Restaurant Menu Section with Filter Tabs -->
+    <section id="menu" class="full-menu-section">
+      <div class="section-container">
+        <div class="menu-section-header">
+          <span class="badge-eyebrow">OUR COMPLETE REPERTOIRE</span>
+          <h2 class="section-title">The Seasonal Menu</h2>
+          <p class="menu-subtitle">Artisan roasts, botanical libations, chef-crafted bites, and rustic mains</p>
+          
+          <!-- Category Tabs: Brews, Small Plates, Mains, Cocktails -->
+          <div class="menu-category-tabs">
+            <button class="tab-btn active" data-filter="all">All Selections</button>
+            <button class="tab-btn" data-filter="brews">Brews</button>
+            <button class="tab-btn" data-filter="bites">Small Plates</button>
+            <button class="tab-btn" data-filter="mains">Mains</button>
+            <button class="tab-btn" data-filter="cocktails">Cocktails</button>
+            <button class="tab-btn" data-filter="desserts">Desserts</button>
+          </div>
+        </div>
+
+        <!-- Menu Grid / Swipe List on Mobile -->
+        <div class="menu-items-grid" id="menu-items-grid">
+          
+          <!-- Brews 1 -->
+          <div class="menu-item-row" data-category="brews">
+            <div class="menu-item-thumb">
+              <img src="https://images.unsplash.com/photo-1517256064527-09c73fc73e38?auto=format&fit=crop&w=400&q=80" alt="Sea Salt Caramel Cold Brew" loading="lazy">
+            </div>
+            <div class="menu-item-main">
+              <div class="menu-item-header">
+                <h4 class="menu-item-name">Sea Salt Caramel Cold Brew</h4>
+                <div class="menu-item-dots"></div>
+                <span class="menu-item-price">$6.50</span>
+              </div>
+              <p class="menu-item-desc">Slow-steeped 18-hour dark roast topped with salted Madagascar sweet cream foam.</p>
+              <div class="menu-item-footer">
+                <span class="menu-tag">Brews</span>
+                <button class="dish-link" data-dish="Sea Salt Caramel Cold Brew" data-price="$6.50" data-cat="Brews" data-desc="Slow-steeped 18-hour dark roast topped with salted Madagascar sweet cream foam.">
+                  VIEW DETAIL <span class="arrow">&rarr;</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Brews 2 -->
+          <div class="menu-item-row" data-category="brews">
+            <div class="menu-item-thumb">
+              <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=400&q=80" alt="Cinnamon Cortado" loading="lazy">
+            </div>
+            <div class="menu-item-main">
+              <div class="menu-item-header">
+                <h4 class="menu-item-name">Cinnamon Cortado</h4>
+                <div class="menu-item-dots"></div>
+                <span class="menu-item-price">$5.00</span>
+              </div>
+              <p class="menu-item-desc">Double origin espresso pulled over steamed silky oat milk and fresh ground spiced bark.</p>
+              <div class="menu-item-footer">
+                <span class="menu-tag">Brews</span>
+                <button class="dish-link" data-dish="Cinnamon Cortado" data-price="$5.00" data-cat="Brews" data-desc="Double origin espresso pulled over steamed silky oat milk and fresh ground spiced bark.">
+                  VIEW DETAIL <span class="arrow">&rarr;</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Brews 3 -->
+          <div class="menu-item-row" data-category="brews">
+            <div class="menu-item-thumb">
+              <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=400&q=80" alt="Vanilla Bean Nitro Latte" loading="lazy">
+            </div>
+            <div class="menu-item-main">
+              <div class="menu-item-header">
+                <h4 class="menu-item-name">Vanilla Bean Nitro Latte</h4>
+                <div class="menu-item-dots"></div>
+                <span class="menu-item-price">$6.50</span>
+              </div>
+              <p class="menu-item-desc">Nitrogen-infused velvety iced latte with raw Bourbon vanilla bean syrup.</p>
+              <div class="menu-item-footer">
+                <span class="menu-tag">Brews</span>
+                <button class="dish-link" data-dish="Vanilla Bean Nitro Latte" data-price="$6.50" data-cat="Brews" data-desc="Nitrogen-infused velvety iced latte with raw Bourbon vanilla bean syrup.">
+                  VIEW DETAIL <span class="arrow">&rarr;</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Small Plates 1 -->
+          <div class="menu-item-row" data-category="bites">
+            <div class="menu-item-thumb">
+              <img src="https://images.unsplash.com/photo-1586444248902-2f64eddc13df?auto=format&fit=crop&w=400&q=80" alt="Rosemary Sea Salt Focaccia" loading="lazy">
+            </div>
+            <div class="menu-item-main">
+              <div class="menu-item-header">
+                <h4 class="menu-item-name">Rosemary Sea Salt Focaccia</h4>
+                <div class="menu-item-dots"></div>
+                <span class="menu-item-price">$8.00</span>
+              </div>
+              <p class="menu-item-desc">Hearth-baked artisan loaf served with whipped wild herb butter and 12-year Modena balsamic.</p>
+              <div class="menu-item-footer">
+                <span class="menu-tag">Small Plates</span>
+                <button class="dish-link" data-dish="Rosemary Sea Salt Focaccia" data-price="$8.00" data-cat="Small Plates" data-desc="Hearth-baked artisan loaf served with whipped wild herb butter and 12-year Modena balsamic.">
+                  VIEW DETAIL <span class="arrow">&rarr;</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Small Plates 2 -->
+          <div class="menu-item-row" data-category="bites">
+            <div class="menu-item-thumb">
+              <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=400&q=80" alt="Charred Burrata Bowl" loading="lazy">
+            </div>
+            <div class="menu-item-main">
+              <div class="menu-item-header">
+                <h4 class="menu-item-name">Charred Burrata Bowl</h4>
+                <div class="menu-item-dots"></div>
+                <span class="menu-item-price">$14.00</span>
+              </div>
+              <p class="menu-item-desc">Torched burrata over heirloom cherry tomatoes, basil oil, and sourdough crisps.</p>
+              <div class="menu-item-footer">
+                <span class="menu-tag">Small Plates</span>
+                <button class="dish-link" data-dish="Charred Burrata Bowl" data-price="$14.00" data-cat="Small Plates" data-desc="Torched burrata over heirloom cherry tomatoes, basil oil, and sourdough crisps.">
+                  VIEW DETAIL <span class="arrow">&rarr;</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Small Plates 3 -->
+          <div class="menu-item-row" data-category="bites">
+            <div class="menu-item-thumb">
+              <img src="https://images.unsplash.com/photo-1599488615731-7e5c2823ff28?auto=format&fit=crop&w=400&q=80" alt="Smoked Paprika Crispy Calamari" loading="lazy">
+            </div>
+            <div class="menu-item-main">
+              <div class="menu-item-header">
+                <h4 class="menu-item-name">Smoked Paprika Crispy Calamari</h4>
+                <div class="menu-item-dots"></div>
+                <span class="menu-item-price">$13.50</span>
+              </div>
+              <p class="menu-item-desc">Flash-fried tender calamari dusted with smoked sea salt, lime zest, and saffron aioli dip.</p>
+              <div class="menu-item-footer">
+                <span class="menu-tag">Small Plates</span>
+                <button class="dish-link" data-dish="Smoked Paprika Crispy Calamari" data-price="$13.50" data-cat="Small Plates" data-desc="Flash-fried tender calamari dusted with smoked sea salt, lime zest, and saffron aioli dip.">
+                  VIEW DETAIL <span class="arrow">&rarr;</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mains 1 -->
+          <div class="menu-item-row" data-category="mains">
+            <div class="menu-item-thumb">
+              <img src="https://images.unsplash.com/photo-1598515214211-89d3c73ae83b?auto=format&fit=crop&w=400&q=80" alt="Char-Grilled Lemon Herb Chicken" loading="lazy">
+            </div>
+            <div class="menu-item-main">
+              <div class="menu-item-header">
+                <h4 class="menu-item-name">Char-Grilled Lemon Herb Chicken</h4>
+                <div class="menu-item-dots"></div>
+                <span class="menu-item-price">$21.00</span>
+              </div>
+              <p class="menu-item-desc">Half-roast pasture chicken steeped in wild thyme, charred lemon, and garlic fingerlings.</p>
+              <div class="menu-item-footer">
+                <span class="menu-tag">Mains</span>
+                <button class="dish-link" data-dish="Char-Grilled Lemon Herb Chicken" data-price="$21.00" data-cat="Mains" data-desc="Half-roast pasture chicken steeped in wild thyme, charred lemon, and garlic fingerlings.">
+                  VIEW DETAIL <span class="arrow">&rarr;</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mains 2 -->
+          <div class="menu-item-row" data-category="mains">
+            <div class="menu-item-thumb">
+              <img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=400&q=80" alt="Truffle Wild Mushroom Tagliatelle" loading="lazy">
+            </div>
+            <div class="menu-item-main">
+              <div class="menu-item-header">
+                <h4 class="menu-item-name">Truffle Wild Mushroom Tagliatelle</h4>
+                <div class="menu-item-dots"></div>
+                <span class="menu-item-price">$19.00</span>
+              </div>
+              <p class="menu-item-desc">Hand-rolled pasta tossed in garlic, seasonal forest mushrooms, parmesan, and truffle oil.</p>
+              <div class="menu-item-footer">
+                <span class="menu-tag">Mains</span>
+                <button class="dish-link" data-dish="Truffle Wild Mushroom Tagliatelle" data-price="$19.00" data-cat="Mains" data-desc="Hand-rolled pasta tossed in garlic, seasonal forest mushrooms, parmesan, and truffle oil.">
+                  VIEW DETAIL <span class="arrow">&rarr;</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mains 3 -->
+          <div class="menu-item-row" data-category="mains">
+            <div class="menu-item-thumb">
+              <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=400&q=80" alt="The Salt Smash Burger" loading="lazy">
+            </div>
+            <div class="menu-item-main">
+              <div class="menu-item-header">
+                <h4 class="menu-item-name">The Salt Smash Burger</h4>
+                <div class="menu-item-dots"></div>
+                <span class="menu-item-price">$17.00</span>
+              </div>
+              <p class="menu-item-desc">Double dry-aged beef patties, smoked cheddar, house-pickled onions, and sea salt aioli on brioche.</p>
+              <div class="menu-item-footer">
+                <span class="menu-tag">Mains</span>
+                <button class="dish-link" data-dish="The Salt Smash Burger" data-price="$17.00" data-cat="Mains" data-desc="Double dry-aged beef patties, smoked cheddar, house-pickled onions, and sea salt aioli on brioche.">
+                  VIEW DETAIL <span class="arrow">&rarr;</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cocktails 1 -->
+          <div class="menu-item-row" data-category="cocktails">
+            <div class="menu-item-thumb">
+              <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=400&q=80" alt="Smoked Rosemary Mezcal Paloma" loading="lazy">
+            </div>
+            <div class="menu-item-main">
+              <div class="menu-item-header">
+                <h4 class="menu-item-name">Smoked Rosemary Mezcal Paloma</h4>
+                <div class="menu-item-dots"></div>
+                <span class="menu-item-price">$16.00</span>
+              </div>
+              <p class="menu-item-desc">Artisanal Oaxaca mezcal, freshly squeezed pink grapefruit, torched garden rosemary, and black lava salt rim.</p>
+              <div class="menu-item-footer">
+                <span class="menu-tag">Cocktails</span>
+                <button class="dish-link" data-dish="Smoked Rosemary Mezcal Paloma" data-price="$16.00" data-cat="Cocktails" data-desc="Artisanal Oaxaca mezcal, freshly squeezed pink grapefruit, torched garden rosemary, and black lava salt rim.">
+                  VIEW DETAIL <span class="arrow">&rarr;</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cocktails 2 -->
+          <div class="menu-item-row" data-category="cocktails">
+            <div class="menu-item-thumb">
+              <img src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?auto=format&fit=crop&w=400&q=80" alt="Bourbon Spiced Fig Old Fashioned" loading="lazy">
+            </div>
+            <div class="menu-item-main">
+              <div class="menu-item-header">
+                <h4 class="menu-item-name">Bourbon Spiced Fig Old Fashioned</h4>
+                <div class="menu-item-dots"></div>
+                <span class="menu-item-price">$17.50</span>
+              </div>
+              <p class="menu-item-desc">Small-batch Kentucky bourbon infused with mission figs, Angostura aromatic bitters, and charred orange peel.</p>
+              <div class="menu-item-footer">
+                <span class="menu-tag">Cocktails</span>
+                <button class="dish-link" data-dish="Bourbon Spiced Fig Old Fashioned" data-price="$17.50" data-cat="Cocktails" data-desc="Small-batch Kentucky bourbon infused with mission figs, Angostura aromatic bitters, and charred orange peel.">
+                  VIEW DETAIL <span class="arrow">&rarr;</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Desserts 1 -->
+          <div class="menu-item-row" data-category="desserts">
+            <div class="menu-item-thumb">
+              <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=400&q=80" alt="Molten Sea Salt Dark Chocolate Tart" loading="lazy">
+            </div>
+            <div class="menu-item-main">
+              <div class="menu-item-header">
+                <h4 class="menu-item-name">Molten Sea Salt Dark Chocolate Tart</h4>
+                <div class="menu-item-dots"></div>
+                <span class="menu-item-price">$9.00</span>
+              </div>
+              <p class="menu-item-desc">70% dark cocoa ganache finished with flaky Maldon sea salt crystals and chilled espresso mascarpone cream.</p>
+              <div class="menu-item-footer">
+                <span class="menu-tag">Desserts</span>
+                <button class="dish-link" data-dish="Molten Sea Salt Dark Chocolate Tart" data-price="$9.00" data-cat="Desserts" data-desc="70% dark cocoa ganache finished with flaky Maldon sea salt crystals and chilled espresso mascarpone cream.">
+                  VIEW DETAIL <span class="arrow">&rarr;</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Mobile Pagination Dots for Menu Horizontal Swiping -->
+        <div class="pagination-dots" id="menu-dots"></div>
+      </div>
+    </section>
+
+    <!-- Our Heritage Section -->
+    <section id="heritage" class="heritage-section">
+      <div class="section-container">
+        <div class="heritage-grid">
+          <div class="heritage-image-col">
+            <div class="chef-image-frame">
+              <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=900&q=85" alt="Executive Chef" class="chef-image" loading="lazy">
+              <div class="chef-badge">
+                <span class="chef-role">Executive Chef</span>
+                <span class="chef-name">Marco Castiglione</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="heritage-content-col">
+            <span class="badge-eyebrow">OUR HERITAGE</span>
+            <h2 class="section-title">Crafting Moments That Linger on the Palate</h2>
+            <p class="heritage-text">
+              Rooted in three generations of culinary passion, our kitchen celebrates the finest local ingredients transformed into edible art. We believe that fine dining should be an immersive experience that engages all five senses under open skies.
+            </p>
+            
+            <div class="heritage-highlights">
+              <div class="highlight-item">
+                <div class="highlight-num">4.8★</div>
+                <div class="highlight-label">Guest & Critic Rating</div>
+              </div>
+              <div class="highlight-item">
+                <div class="highlight-num">100%</div>
+                <div class="highlight-label">Organic & Sustainable Sourcing</div>
+              </div>
+              <div class="highlight-item">
+                <div class="highlight-num">450+</div>
+                <div class="highlight-label">Curated Cellar Vintages</div>
+              </div>
+            </div>
+
+            <div class="heritage-actions">
+              <a href="#reservations" class="btn btn-primary">RESERVE A TASTING TABLE</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Inline Reservation Section & Widget -->
+    <section id="reservations" class="reservations-section">
+      <div class="section-container">
+        <div class="reservation-box">
+          <div class="reservation-box-header">
+            <span class="badge-eyebrow">TABLE RESERVATION</span>
+            <h2 class="section-title">Reserve Your Evening at THE SALT</h2>
+            <p class="reservation-box-subtitle">Select your preferred date, time, and party size for indoor seating or our illuminated chill garden patio.</p>
+          </div>
+
+          <!-- Interactive Table Booking Widget (Stacked on mobile with full touch targets) -->
+          <form id="inline-booking-form" class="booking-widget" onsubmit="event.preventDefault(); handleInlineBooking();">
+            <div class="widget-grid">
+              <!-- Date Input -->
+              <div class="widget-field">
+                <label for="book-date">
+                  <span class="field-icon">📅</span> Date
+                </label>
+                <input type="date" id="book-date" required>
+              </div>
+
+              <!-- Time Selector -->
+              <div class="widget-field">
+                <label for="book-time">
+                  <span class="field-icon">⏰</span> Time
+                </label>
+                <select id="book-time" required>
+                  <option value="17:00">5:00 PM (Garden Sunset)</option>
+                  <option value="18:30" selected>6:30 PM (Early Dinner)</option>
+                  <option value="19:45">7:45 PM (Prime Evening)</option>
+                  <option value="21:00">9:00 PM (Late Chill & Sips)</option>
+                  <option value="22:15">10:15 PM (Nightcap & Lounge)</option>
+                </select>
+              </div>
+
+              <!-- Guests Selector -->
+              <div class="widget-field">
+                <label for="book-guests">
+                  <span class="field-icon">👥</span> Guests
+                </label>
+                <select id="book-guests" required>
+                  <option value="2" selected>2 Guests (Intimate Table)</option>
+                  <option value="1">1 Guest (Bar & Counter)</option>
+                  <option value="4">4 Guests (Garden Booth)</option>
+                  <option value="6">6 Guests (Courtyard Lounge)</option>
+                  <option value="private">8+ Guests (Private Dining)</option>
+                </select>
+              </div>
+
+              <!-- Seating Area -->
+              <div class="widget-field">
+                <label for="book-area">
+                  <span class="field-icon">🌿</span> Seating
+                </label>
+                <select id="book-area">
+                  <option value="Illuminated Patio Garden" selected>Illuminated Patio Garden</option>
+                  <option value="Main Dining Hall">Main Dining Hall</option>
+                  <option value="Chef's Tasting Counter">Chef's Tasting Counter</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="widget-submit-row">
+              <button type="submit" class="btn btn-primary btn-lg widget-btn">
+                <span>FIND TABLE</span>
+                <span class="arrow">&rarr;</span>
+              </button>
+            </div>
+          </form>
+
+          <div class="reservation-perks">
+            <div class="perk-item"><span>✨</span> Complimentary Valet Parking</div>
+            <div class="perk-item"><span>🍷</span> Sommelier Pairing Available</div>
+            <div class="perk-item"><span>🌿</span> Outdoor Heated Canopy</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials / Guest Reviews Section -->
+    <section id="reviews" class="reviews-section">
+      <div class="section-container">
+        <div class="reviews-header">
+          <span class="badge-eyebrow">CRITICAL ACCLAIM</span>
+          <h2 class="section-title">Stories from Our Guests</h2>
+          <p class="reviews-subtitle">Reflections on unforgettable dinners, sensory pairings, and celebrations under our illuminated canopy.</p>
+        </div>
+
+        <div class="testimonials-grid">
+          <!-- Testimonial 1 -->
+          <div class="testimonial-card">
+            <div class="rating-stars">★★★★★ <span class="rating-score">(4.9/5)</span></div>
+            <p class="testimonial-quote">
+              "The Truffle Wild Mushroom Tagliatelle is nothing short of a revelation. Paired with the ambient garden setting and sommelier selection, THE SALT delivers one of the most memorable fine dining atmospheres in the country."
+            </p>
+            <div class="guest-profile">
+              <div class="guest-avatar">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=160&q=80" alt="Elena Rostova" loading="lazy">
+              </div>
+              <div class="guest-info">
+                <h4 class="guest-name">Elena Rostova</h4>
+                <span class="guest-title">Food & Wine Critic, Gastronomy International</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="testimonial-card">
+            <div class="rating-stars">★★★★★ <span class="rating-score">(4.8/5)</span></div>
+            <p class="testimonial-quote">
+              "Marco Castiglione's respect for artisan ingredients shines in every element. The Charred Burrata Bowl and the house-baked sourdough pairing are sheer perfection on a plate."
+            </p>
+            <div class="guest-profile">
+              <div class="guest-avatar">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=160&q=80" alt="Chef Julian Mercer" loading="lazy">
+              </div>
+              <div class="guest-info">
+                <h4 class="guest-name">Chef Julian Mercer</h4>
+                <span class="guest-title">Culinary Director & Former Michelin Mentor</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="testimonial-card">
+            <div class="rating-stars">★★★★★ <span class="rating-score">(4.8/5)</span></div>
+            <p class="testimonial-quote">
+              "We celebrated our 10th anniversary in the chill garden lounge. The personalized tasting menu, Sea Salt Caramel Cold Brew, and impeccable hospitality made our evening absolutely unforgettable."
+            </p>
+            <div class="guest-profile">
+              <div class="guest-avatar">
+                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=160&q=80" alt="Marcus & Sophia Vance" loading="lazy">
+              </div>
+              <div class="guest-info">
+                <h4 class="guest-name">Marcus & Sophia Vance</h4>
+                <span class="guest-title">Private Dining Guests</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Instagram Patio Gallery Grid -->
+    <section id="gallery" class="gallery-section">
+      <div class="section-container">
+        <div class="gallery-header">
+          <span class="badge-eyebrow">FOLLOW THE MOMENT</span>
+          <h2 class="section-title">Moments from the Garden</h2>
+          <p class="gallery-subtitle">Tag <a href="https://instagram.com" target="_blank" rel="noopener" class="insta-handle">@thesalt.dining</a> to be featured in our seasonal journal</p>
+        </div>
+
+        <div class="instagram-grid">
+          <!-- Item 1 -->
+          <div class="insta-tile">
+            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=600&q=80" alt="Illuminated Patio Dining" class="insta-img" loading="lazy">
+            <div class="insta-overlay">
+              <span class="insta-icon">📷</span>
+              <span class="insta-caption">Golden hour on the garden patio</span>
+              <span class="insta-likes">♥ 842</span>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="insta-tile">
+            <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=600&q=80" alt="Craft Mezcal Cocktail" class="insta-img" loading="lazy">
+            <div class="insta-overlay">
+              <span class="insta-icon">📷</span>
+              <span class="insta-caption">Smoked Rosemary Paloma in making</span>
+              <span class="insta-likes">♥ 1.2k</span>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="insta-tile">
+            <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&q=80" alt="Charred Prime Cut" class="insta-img" loading="lazy">
+            <div class="insta-overlay">
+              <span class="insta-icon">📷</span>
+              <span class="insta-caption">Wood-fired perfection & herbs</span>
+              <span class="insta-likes">♥ 967</span>
+            </div>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="insta-tile">
+            <img src="https://images.unsplash.com/photo-1559847844-5315695dadae?auto=format&fit=crop&w=600&q=80" alt="Artisan Plating" class="insta-img" loading="lazy">
+            <div class="insta-overlay">
+              <span class="insta-icon">📷</span>
+              <span class="insta-caption">Hand-crafted seasonal details</span>
+              <span class="insta-likes">♥ 674</span>
+            </div>
+          </div>
+
+          <!-- Item 5 -->
+          <div class="insta-tile">
+            <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=600&q=80" alt="Sommelier Cellar" class="insta-img" loading="lazy">
+            <div class="insta-overlay">
+              <span class="insta-icon">📷</span>
+              <span class="insta-caption">Curated cellar selections</span>
+              <span class="insta-likes">♥ 812</span>
+            </div>
+          </div>
+
+          <!-- Item 6 -->
+          <div class="insta-tile">
+            <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=600&q=80" alt="Dessert & Drinks" class="insta-img" loading="lazy">
+            <div class="insta-overlay">
+              <span class="insta-icon">📷</span>
+              <span class="insta-caption">Nightcaps in the chill lounge</span>
+              <span class="insta-likes">♥ 1.4k</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Comprehensive Luxury Detailed Footer -->
+    <footer class="site-footer">
+      <div class="section-container">
+        <div class="footer-grid">
+          <!-- Column 1: Brand & Philosophy -->
+          <div class="footer-col brand-col">
+            <div class="footer-logo">THE SALT</div>
+            <div class="footer-tagline-text">BOTANICAL CHILL GARDEN & FINE DINING</div>
+            <p class="footer-desc">
+              An architectural sanctuary designed for intimate gatherings, candlelit garden dinners, and sensory tasting journeys under the stars.
+            </p>
+            <div class="footer-social-links">
+              <a href="#" class="social-link" aria-label="Instagram">IG</a>
+              <a href="#" class="social-link" aria-label="Facebook">FB</a>
+              <a href="#" class="social-link" aria-label="Tripadvisor">TA</a>
+              <a href="#" class="social-link" aria-label="OpenTable">OT</a>
+            </div>
+          </div>
+
+          <!-- Column 2: Navigation Links -->
+          <div class="footer-col">
+            <h4 class="footer-heading">NAVIGATION</h4>
+            <ul class="footer-links">
+              <li><a href="#hero">Welcome</a></li>
+              <li><a href="#specials">Signature Specials</a></li>
+              <li><a href="#menu">Seasonal Menu</a></li>
+              <li><a href="#heritage">Our Heritage</a></li>
+              <li><a href="#reservations">Table Booking</a></li>
+              <li><a href="#gallery">Patio Gallery</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 3: Address & Contact Details -->
+          <div class="footer-col">
+            <h4 class="footer-heading">LOCATION & CONTACT</h4>
+            <ul class="footer-info-list">
+              <li>
+                <strong>Address:</strong><br>
+                428 Grand Promenade, Metropolitan Quarter<br>
+                <span class="text-subtle">Entrance adjacent to Botanical Archway</span>
+              </li>
+              <li style="margin-top: 0.5rem;">
+                <strong>Reservations Concierge:</strong><br>
+                <a href="mailto:reservations@thesalt.com" class="footer-contact-link">reservations@thesalt.com</a>
+              </li>
+              <li>
+                <strong>Direct Telephone:</strong><br>
+                <a href="tel:+15550192834" class="footer-contact-link">+1 (555) 019-2834</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 4: Operating Hours -->
+          <div class="footer-col">
+            <h4 class="footer-heading">OPERATING HOURS</h4>
+            <ul class="footer-info-list">
+              <li>
+                <span>Tuesday – Thursday:</span><br>
+                <strong>5:00 PM – 11:00 PM</strong>
+              </li>
+              <li>
+                <span>Friday – Saturday:</span><br>
+                <strong>4:30 PM – Midnight</strong>
+              </li>
+              <li>
+                <span>Sunday:</span><br>
+                <strong>4:30 PM – 10:30 PM</strong>
+              </li>
+              <li>
+                <span>Monday:</span><br>
+                <span class="text-subtle">Closed for Private Vineyard Tastings</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="footer-copy">&copy; 2026 THE SALT. All Rights Reserved. Artisanal Dining Experience.</div>
+          <div class="footer-legal">
+            <a href="#">Privacy Policy</a>
+            <span>&bull;</span>
+            <a href="#">Terms of Service</a>
+            <span>&bull;</span>
+            <a href="#">Dietary & Allergy Guide</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Persistent Mobile Floating Reserve Bar (Thumb-Friendly) -->
+  <div id="mobile-sticky-reserve" class="mobile-sticky-reserve">
+    <a href="#reservations" class="mobile-reserve-trigger" aria-label="Book a table at THE SALT">
+      <span class="reserve-btn-icon">📅</span>
+      <span class="reserve-btn-text">RESERVE A TABLE</span>
+      <span class="reserve-btn-arrow">&rarr;</span>
+    </a>
+  </div>
+
+  <!-- Floating Luxury Concierge FAQ Chatbot -->
+  <div id="salt-chatbot-widget" class="chatbot-widget">
+    <!-- Floating Trigger Button -->
+    <button id="chatbot-toggle-btn" class="chatbot-trigger" aria-label="Open THE SALT Concierge FAQ Chatbot">
+      <span class="chatbot-trigger-icon">💬</span>
+      <span class="chatbot-trigger-label">Concierge FAQ</span>
+      <span class="chatbot-unread-dot"></span>
+    </button>
+
+    <!-- Chatbot Window -->
+    <div id="chatbot-window" class="chatbot-window">
+      <div class="chatbot-header">
+        <div class="chatbot-header-info">
+          <div class="chatbot-avatar">🌿</div>
+          <div>
+            <h4 class="chatbot-title">THE SALT Concierge</h4>
+            <span class="chatbot-status"><span class="status-dot"></span> Online &bull; FAQ Assistant</span>
+          </div>
+        </div>
+        <button id="chatbot-close-btn" class="chatbot-close" aria-label="Close Chatbot">&times;</button>
+      </div>
+
+      <!-- Chat Messages Container -->
+      <div id="chatbot-messages" class="chatbot-messages">
+        <div class="chat-msg bot-msg">
+          <div class="msg-bubble">
+            Welcome to <strong>THE SALT Concierge</strong>! 🌿 I am here to assist with your dining plans. Ask me anything about our menu, table reservations, garden seating, parking, dietary options, or operating hours.
+          </div>
+        </div>
+
+        <!-- Quick FAQ Suggestion Chips -->
+        <div class="faq-chips-container" id="faq-chips-container">
+          <span class="faq-chips-title">Suggested questions:</span>
+          <div class="faq-chips-grid">
+            <button type="button" class="faq-chip" data-question="What are your opening hours?">🕒 Opening Hours</button>
+            <button type="button" class="faq-chip" data-question="How do I book a table in the chill garden?">🌿 Book Garden Table</button>
+            <button type="button" class="faq-chip" data-question="Where are you located and is there parking?">📍 Location & Valet</button>
+            <button type="button" class="faq-chip" data-question="What are your signature dishes & drinks?">🍽️ Signature Dishes</button>
+            <button type="button" class="faq-chip" data-question="Do you have vegan and gluten-free options?">🥗 Dietary / Vegan / GF</button>
+            <button type="button" class="faq-chip" data-question="Is there a dress code?">👔 Dress Code</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Chat Input Area -->
+      <form id="chatbot-form" class="chatbot-input-area" onsubmit="event.preventDefault(); handleChatSubmit();">
+        <input type="text" id="chatbot-input" placeholder="Ask a question..." required autocomplete="off">
+        <button type="submit" class="chatbot-send-btn" aria-label="Send message">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="22" y1="2" x2="11" y2="13"></line>
+            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+          </svg>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Reservation Confirmation / Modal Dialog -->
+  <div id="reservation-modal" class="modal-backdrop">
+    <div class="modal-card">
+      <button class="modal-close" aria-label="Close modal">&times;</button>
+      <div class="modal-header">
+        <span class="badge-eyebrow">TABLE CONFIRMATION</span>
+        <h3 class="modal-title">Complete Your Reservation</h3>
+      </div>
+      <div id="modal-summary" class="booking-summary-banner">
+        <span id="summary-details">2 Guests &bull; Today &bull; 6:30 PM &bull; Illuminated Patio Garden</span>
+      </div>
+      <form id="reservation-form" class="modal-form" onsubmit="event.preventDefault(); alert('Reservation Confirmed! A concierge confirmation SMS and email have been sent to you. We look forward to hosting you at THE SALT.'); document.getElementById('reservation-modal').classList.remove('active');">
+        <div class="form-row">
+          <div class="form-group">
+            <label>Full Name</label>
+            <input type="text" required placeholder="Alexander Wright">
+          </div>
+          <div class="form-group">
+            <label>Phone Number</label>
+            <input type="tel" required placeholder="+1 (555) 019-2834">
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Email for Confirmation</label>
+          <input type="email" required placeholder="alexander@example.com">
+        </div>
+        <div class="form-group">
+          <label>Special Occasion or Dietary Notes</label>
+          <input type="text" placeholder="e.g. Birthday celebration, gluten sensitivity">
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">CONFIRM TABLE RESERVATION</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Dish Detail Modal -->
+  <div id="dish-modal" class="modal-backdrop">
+    <div class="modal-card">
+      <button class="modal-close" aria-label="Close modal">&times;</button>
+      <div class="modal-header">
+        <span id="dish-modal-cat" class="badge-eyebrow">MAINS</span>
+        <h3 id="dish-modal-title" class="modal-title">Dish Title</h3>
+      </div>
+      <div class="dish-modal-body">
+        <p id="dish-modal-desc" class="dish-desc" style="font-size: 1.05rem; line-height: 1.7; margin-bottom: 1.5rem;"></p>
+        <div class="dish-modal-footer">
+          <div id="dish-modal-price" class="modal-dish-price">$0.00</div>
+          <a href="#reservations" class="btn btn-primary btn-sm" onclick="document.getElementById('dish-modal').classList.remove('active');">BOOK A TABLE</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

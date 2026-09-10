@@ -1867,22 +1867,174 @@ h1, h2, h3, h4, .hero-title, .section-title, .dish-title, .footer-logo, .brand-m
     display: none;
   }
 
+/* =========================================
+   Mobile-Prioritized Hero Quick Info Strip
+   ========================================= */
+.hero-quick-strip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.quick-pill {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 999px;
+  padding: 0.48rem 1rem;
+  font-size: 0.78rem;
+  color: var(--text-warm);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  text-decoration: none;
+  transition: var(--transition);
+  min-height: 38px;
+}
+
+.quick-pill:hover, .quick-pill:active {
+  background: rgba(164, 66, 46, 0.25);
+  border-color: var(--primary-light);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.quick-pill .pill-dot {
+  width: 7px;
+  height: 7px;
+  background: #34d399;
+  border-radius: 50%;
+  display: inline-block;
+  box-shadow: 0 0 6px #34d399;
+}
+
+.quick-pill .pill-star {
+  color: var(--gold-accent);
+  font-size: 0.88rem;
+}
+
+/* =========================================
+   Mobile-Prioritized App Navigation Dock
+   ========================================= */
+.mobile-bottom-dock {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background: rgba(12, 14, 22, 0.94);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 0.45rem 1rem calc(0.45rem + env(safe-area-inset-bottom, 0px));
+  box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.75);
+  justify-content: space-around;
+  align-items: center;
+}
+
+.dock-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.22rem;
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  text-decoration: none;
+  padding: 0.35rem 0.65rem;
+  border-radius: 12px;
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  transition: all 0.2s ease;
+  min-width: 58px;
+  min-height: 48px;
+  position: relative;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.dock-item:active {
+  transform: scale(0.92);
+}
+
+.dock-icon {
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+.dock-reserve {
+  color: #ffffff;
+  background: linear-gradient(135deg, var(--primary) 0%, #852f1e 100%);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  padding: 0.45rem 1.15rem;
+  box-shadow: 0 4px 16px rgba(164, 66, 46, 0.45);
+}
+
+.dock-reserve .dock-icon {
+  font-size: 1.15rem;
+}
+
+.dock-reserve .dock-label {
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.dock-unread-dot {
+  position: absolute;
+  top: 4px;
+  right: 12px;
+  width: 7px;
+  height: 7px;
+  background: #34d399;
+  border-radius: 50%;
+  box-shadow: 0 0 6px #34d399;
+}
+
+/* Bottom Sheet Drag Handle */
+.bottom-sheet-drag-handle {
+  display: none;
+  width: 44px;
+  height: 5px;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 3px;
+  margin: 0.1rem auto 1.1rem;
+}
+
+/* =========================================
+   Responsive Breakpoints & Touch Optimization
+   ========================================= */
+@media (max-width: 992px) {
+  /* Navigation */
+  .nav-links, .desktop-reserve-btn, .nav-divider {
+    display: none;
+  }
+
   .hamburger-btn {
     display: flex;
   }
 
-  /* Persistent Mobile Bottom Reserve Bar */
-  .mobile-sticky-reserve {
-    display: block;
+  /* Show Mobile Bottom App Dock */
+  .mobile-bottom-dock {
+    display: flex;
   }
 
-  /* Horizontal Touch Swipe Carousel for Specials */
+  /* Horizontal Touch Swipe Carousel for Specials with Edge Peek */
   .cards-grid {
     display: flex;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
-    gap: 1.25rem;
+    gap: 1.1rem;
     padding: 0.5rem 0.25rem 1rem;
     scrollbar-width: none;
   }
@@ -1893,17 +2045,17 @@ h1, h2, h3, h4, .hero-title, .section-title, .dish-title, .footer-logo, .brand-m
 
   .dish-card {
     scroll-snap-align: center;
-    flex: 0 0 min(82vw, 360px);
+    flex: 0 0 min(86vw, 360px);
     max-width: 360px;
   }
 
-  /* Horizontal Touch Swipe Carousel for Menu */
+  /* Horizontal Touch Swipe Carousel for Menu with Edge Peek */
   .menu-items-grid {
     display: flex;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
-    gap: 1.25rem;
+    gap: 1.1rem;
     padding: 0.5rem 0.25rem 1rem;
     scrollbar-width: none;
   }
@@ -1914,7 +2066,7 @@ h1, h2, h3, h4, .hero-title, .section-title, .dish-title, .footer-logo, .brand-m
 
   .menu-item-row {
     scroll-snap-align: center;
-    flex: 0 0 min(84vw, 380px);
+    flex: 0 0 min(88vw, 380px);
     max-width: 380px;
   }
 
@@ -1925,11 +2077,11 @@ h1, h2, h3, h4, .hero-title, .section-title, .dish-title, .footer-logo, .brand-m
   /* Heritage Layout */
   .heritage-grid {
     grid-template-columns: 1fr;
-    gap: 3rem;
+    gap: 2.8rem;
   }
 
   .chef-image {
-    height: 420px;
+    height: 400px;
   }
 
   /* Testimonials Grid */
@@ -1953,22 +2105,23 @@ h1, h2, h3, h4, .hero-title, .section-title, .dish-title, .footer-logo, .brand-m
   /* Footer Layout */
   .footer-grid {
     grid-template-columns: 1fr 1fr;
-    gap: 3rem;
+    gap: 2.5rem;
+    padding-bottom: 4rem; /* Safe padding above bottom dock */
   }
 }
 
 @media (max-width: 640px) {
   .section-container {
-    padding: 0 1.25rem;
+    padding: 0 1.15rem;
   }
 
   .hero-section {
-    padding: 7rem 1.25rem 4.5rem;
+    padding: 6.5rem 1.15rem 4rem;
   }
 
   .hero-title {
-    font-size: clamp(2.6rem, 11vw, 4.2rem);
-    letter-spacing: 0.08em;
+    font-size: clamp(2.5rem, 11.5vw, 3.8rem);
+    letter-spacing: 0.06em;
   }
 
   .hero-tagline {
@@ -1977,7 +2130,7 @@ h1, h2, h3, h4, .hero-title, .section-title, .dish-title, .footer-logo, .brand-m
 
   .hero-description {
     font-size: 0.92rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
   }
 
   .hero-cta-group {
@@ -1988,27 +2141,58 @@ h1, h2, h3, h4, .hero-title, .section-title, .dish-title, .footer-logo, .brand-m
 
   .hero-cta-group .btn {
     width: 100%;
+    min-height: 52px;
+  }
+
+  /* Menu category tabs horizontal scrolling */
+  .menu-category-tabs {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 0.5rem;
+    padding-bottom: 0.5rem;
+    scrollbar-width: none;
+    justify-content: flex-start;
+  }
+
+  .menu-category-tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .tab-btn {
+    flex-shrink: 0;
+    scroll-snap-align: start;
+    min-height: 48px;
+    padding: 0.65rem 1.25rem;
   }
 
   .reservation-box {
-    padding: 2.2rem 1.25rem;
+    padding: 2rem 1.15rem;
     border-radius: 18px;
   }
 
   /* Fully Stacked Reservation Widget for Mobile */
   .widget-grid {
     grid-template-columns: 1fr;
-    gap: 1.1rem;
+    gap: 1rem;
+  }
+
+  .widget-field input,
+  .widget-field select {
+    min-height: 54px;
+    font-size: 1rem;
   }
 
   .widget-btn {
     width: 100%;
+    min-height: 54px;
   }
 
   .reservation-perks {
     flex-direction: column;
     align-items: flex-start;
-    gap: 1rem;
+    gap: 0.85rem;
   }
 
   .form-row {
@@ -2022,23 +2206,50 @@ h1, h2, h3, h4, .hero-title, .section-title, .dish-title, .footer-logo, .brand-m
 
   .instagram-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 0.6rem;
+    gap: 0.5rem;
   }
 
   .footer-grid {
     grid-template-columns: 1fr;
-    gap: 2.5rem;
+    gap: 2.2rem;
   }
 
   .footer-bottom {
     flex-direction: column;
     text-align: center;
     gap: 1rem;
+    padding-bottom: 4rem; /* Safe padding above bottom dock */
   }
 
   .footer-legal {
     flex-wrap: wrap;
     justify-content: center;
+  }
+
+  /* Mobile Bottom Sheet Modal Behaviors */
+  .bottom-sheet-drag-handle {
+    display: block;
+  }
+
+  .modal-backdrop {
+    align-items: flex-end;
+    padding: 0;
+  }
+
+  .modal-card {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+    max-width: 100vw;
+    width: 100vw;
+    max-height: 88vh;
+    padding: 1.35rem 1.25rem calc(1.5rem + env(safe-area-inset-bottom, 0px));
+    transform: translateY(100%);
+  }
+
+  .modal-backdrop.active .modal-card {
+    transform: translateY(0);
   }
 }
 
@@ -2107,7 +2318,7 @@ h1, h2, h3, h4, .hero-title, .section-title, .dish-title, .footer-logo, .brand-m
   max-width: calc(100vw - 2rem);
   height: 520px;
   max-height: calc(100vh - 120px);
-  background: rgba(14, 16, 24, 0.95);
+  background: rgba(14, 16, 24, 0.96);
   border: 1px solid var(--border-warm);
   border-radius: 20px;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8), 0 0 40px rgba(164, 66, 46, 0.2);
@@ -2187,8 +2398,8 @@ h1, h2, h3, h4, .hero-title, .section-title, .dish-title, .footer-logo, .brand-m
   background: rgba(255, 255, 255, 0.06);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 50%;
-  width: 32px;
-  height: 32px;
+  width: 36px;
+  height: 36px;
   font-size: 1.4rem;
   color: var(--text-muted);
   cursor: pointer;
@@ -2361,33 +2572,48 @@ h1, h2, h3, h4, .hero-title, .section-title, .dish-title, .footer-logo, .brand-m
 
 @media (max-width: 992px) {
   .chatbot-widget {
-    bottom: 5.5rem; /* Sit cleanly above mobile sticky reserve button */
+    bottom: 5rem;
     right: 1.25rem;
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 640px) {
+  /* On small mobile, convert Chatbot to a full native Bottom Sheet */
   .chatbot-widget {
-    right: 1rem;
-    bottom: 5.25rem;
-  }
-
-  .chatbot-window {
-    width: calc(100vw - 2rem);
-    height: 480px;
+    bottom: 0;
     right: 0;
-  }
-
-  .chatbot-trigger-label {
-    display: none;
+    left: 0;
+    width: 100vw;
+    align-items: stretch;
+    pointer-events: none;
   }
 
   .chatbot-trigger {
-    padding: 0.85rem;
-    border-radius: 50%;
-    width: 48px;
-    height: 48px;
-    justify-content: center;
+    display: none; /* Accessible directly from bottom dock button */
+  }
+
+  .chatbot-window {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    max-width: 100vw;
+    height: 82vh;
+    max-height: 82vh;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+    transform: translateY(100%);
+    box-shadow: 0 -15px 40px rgba(0, 0, 0, 0.85);
+  }
+
+  .chatbot-widget.open .chatbot-window {
+    transform: translateY(0);
+    pointer-events: auto;
   }
 }
+
 

@@ -107,6 +107,22 @@
           <a href="#menu" class="btn btn-outline btn-lg">EXPLORE THE MENU</a>
         </div>
 
+        <!-- Mobile-Prioritized Quick Info Pill Strip -->
+        <div class="hero-quick-strip">
+          <a href="#reservations" class="quick-pill">
+            <span class="pill-dot"></span>
+            <span class="pill-text">Open Tonight <strong>5:00 PM</strong></span>
+          </a>
+          <a href="#reviews" class="quick-pill rating-pill">
+            <span class="pill-star">★</span>
+            <span class="pill-text"><strong>4.8</strong> (1.2k+ Reviews)</span>
+          </a>
+          <a href="#footer" class="quick-pill">
+            <span class="pill-icon">📍</span>
+            <span class="pill-text">Grand Promenade &bull; Valet</span>
+          </a>
+        </div>
+
         <!-- Restaurant Image Placed Below the Header Text & Buttons -->
         <div class="hero-portrait-showcase">
           <div class="restaurant-portrait-frame">
@@ -838,14 +854,26 @@
     </footer>
   </div>
 
-  <!-- Persistent Mobile Floating Reserve Bar (Thumb-Friendly) -->
-  <div id="mobile-sticky-reserve" class="mobile-sticky-reserve">
-    <a href="#reservations" class="mobile-reserve-trigger" aria-label="Book a table at THE SALT">
-      <span class="reserve-btn-icon">📅</span>
-      <span class="reserve-btn-text">RESERVE A TABLE</span>
-      <span class="reserve-btn-arrow">&rarr;</span>
+  <!-- Mobile-Prioritized App Navigation Dock (Thumb-Optimized with Safe Area Inset) -->
+  <nav id="mobile-bottom-dock" class="mobile-bottom-dock" aria-label="Mobile Navigation Dock">
+    <a href="#reservations" class="dock-item dock-reserve" id="dock-btn-reserve" aria-label="Reserve a table">
+      <span class="dock-icon">📅</span>
+      <span class="dock-label">Reserve</span>
     </a>
-  </div>
+    <a href="#menu" class="dock-item" id="dock-btn-menu" aria-label="Explore menu">
+      <span class="dock-icon">🍽️</span>
+      <span class="dock-label">Menu</span>
+    </a>
+    <button type="button" class="dock-item" id="dock-btn-concierge" aria-label="Open Concierge FAQ">
+      <span class="dock-icon">💬</span>
+      <span class="dock-label">Concierge</span>
+      <span class="dock-unread-dot"></span>
+    </button>
+    <a href="tel:+15550192834" class="dock-item" id="dock-btn-call" aria-label="Call THE SALT host">
+      <span class="dock-icon">📞</span>
+      <span class="dock-label">Call Host</span>
+    </a>
+  </nav>
 
   <!-- Floating Luxury Concierge FAQ Chatbot -->
   <div id="salt-chatbot-widget" class="chatbot-widget">
@@ -856,8 +884,9 @@
       <span class="chatbot-unread-dot"></span>
     </button>
 
-    <!-- Chatbot Window -->
+    <!-- Chatbot Window / Mobile Bottom Sheet -->
     <div id="chatbot-window" class="chatbot-window">
+      <div class="bottom-sheet-drag-handle" aria-hidden="true"></div>
       <div class="chatbot-header">
         <div class="chatbot-header-info">
           <div class="chatbot-avatar">🌿</div>
@@ -907,6 +936,7 @@
   <!-- Reservation Confirmation / Modal Dialog -->
   <div id="reservation-modal" class="modal-backdrop">
     <div class="modal-card">
+      <div class="bottom-sheet-drag-handle" aria-hidden="true"></div>
       <button class="modal-close" aria-label="Close modal">&times;</button>
       <div class="modal-header">
         <span class="badge-eyebrow">TABLE CONFIRMATION</span>
@@ -942,6 +972,7 @@
   <!-- Dish Detail Modal -->
   <div id="dish-modal" class="modal-backdrop">
     <div class="modal-card">
+      <div class="bottom-sheet-drag-handle" aria-hidden="true"></div>
       <button class="modal-close" aria-label="Close modal">&times;</button>
       <div class="modal-header">
         <span id="dish-modal-cat" class="badge-eyebrow">MAINS</span>

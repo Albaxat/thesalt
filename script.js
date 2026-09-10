@@ -474,6 +474,42 @@ function setupUIEvents() {
       }, 350);
     });
   });
+
+  // Mobile Bottom App Dock Handlers
+  const dockBtnConcierge = document.getElementById('dock-btn-concierge');
+  if (dockBtnConcierge && chatbotWidget) {
+    dockBtnConcierge.addEventListener('click', (e) => {
+      e.preventDefault();
+      chatbotWidget.classList.toggle('open');
+      if (chatbotWidget.classList.contains('open') && chatbotInput) {
+        setTimeout(() => chatbotInput.focus(), 250);
+      }
+    });
+  }
+
+  // Active Bottom Dock highlighting on scroll
+  const sections = document.querySelectorAll('section[id], footer[id]');
+  const dockItems = document.querySelectorAll('.mobile-bottom-dock .dock-item');
+
+  function updateDockActiveState() {
+    const scrollPos = window.scrollY + 200;
+    sections.forEach(section => {
+      const top = section.offsetTop;
+      const height = section.offsetHeight;
+      const id = section.getAttribute('id');
+      if (scrollPos >= top && scrollPos < top + height) {
+        dockItems.forEach(item => {
+          if (item.getAttribute('href') === `#${id}`) {
+            item.classList.add('active');
+          } else if (item.getAttribute('href')?.startsWith('#')) {
+            item.classList.remove('active');
+          }
+        });
+      }
+    });
+  }
+
+  window.addEventListener('scroll', updateDockActiveState, { passive: true });
 }
 
 // Event Listeners
@@ -485,4 +521,5 @@ document.addEventListener('DOMContentLoaded', () => {
   setupUIEvents();
   preloadFrames();
 });
+
 
